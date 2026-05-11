@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="content_description" translatable="false">content</string>
+    <string name="app_name" translatable="false">Alfanar Villa Room</string>
+    <string name="empty" translatable="false" />
+    <string name="language_turkish" translatable="false">Türkçe</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_arabic" translatable="false">عربى</string>
+    <string name="gmt096" translatable="false">GMT-4</string>
+    <string name="gmt097" translatable="false">GMT-3</string>
+    <string name="gmt098" translatable="false">GMT-2</string>
+    <string name="gmt099" translatable="false">GMT-1</string>
+    <string name="gmt100" translatable="false">GMT0</string>
+    <string name="gmt101" translatable="false">GMT+1</string>
+    <string name="gmt102" translatable="false">GMT+2</string>
+    <string name="gmt103" translatable="false">GMT+3</string>
+    <string name="gmt104" translatable="false">GMT+4</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="one" translatable="false">1</string>
+    <string name="two" translatable="false">2</string>
+    <string name="three" translatable="false">3</string>
+    <string name="four" translatable="false">4</string>
+    <string name="five" translatable="false">5</string>
+    <string name="six" translatable="false">6</string>
+    <string name="seven" translatable="false">7</string>
+    <string name="eight" translatable="false">8</string>
+    <string name="nine" translatable="false">9</string>
+    <string name="star" translatable="false">*</string>
+    <string name="square" translatable="false">#</string>
+    <string name="comma" translatable="false">,</string>
+    <string name="open_weather_maps_app_id" translatable="false">137c0e033002d5861d923794c954ad32</string>
+    <string name="two_dots" translatable="false">:</string>
+    <string name="contact_no" translatable="false">NO</string>
+    <string name="contact_nc" translatable="false">NC</string>
+    <string name="short_line" translatable="false">-</string>
+    <string name="zone_contact" translatable="false">Zone NO/NC</string>
+    <string name="centigrade" translatable="false">°C</string>
+    <string name="percent" translatable="false">%</string>
+    <string name="dot" translatable="false">.</string>
+
+    <string name="tone">Tone</string>
+    <string name="doors">Doors</string>
+    <string name="rooms">Rooms</string>
+    <string name="settings">Settings</string>
+    <string name="settings_lbldevsettings">Device Settings</string>
+    <string name="settings_lblringettings">Ring Settings</string>
+    <string name="settings_lbldevname">Device Name</string>
+    <string name="settings_lblsleepoptions">Sleep Options</string>
+    <string name="settings_lblsubled">Sub Leds</string>
+    <string name="settings_lblsilentmode">Silent Mode</string>
+    <string name="settings_lblabout">About</string>
+    <string name="settings_lblfactoryreset">Factory Reset</string>
+    <string name="settings_lbllanguages">Languages</string>
+    <string name="settings_lbltimezones">Time Zones</string>
+    <string name="factory_reset">This will erase all personal settings.\n Ringtones Settings, Themes, Sleep Options, Silent Mode, Languages, Time Zones, Passwords, Call Logs, Photos,Wake Up List etc. </string>
+    <string name="calls_opendoor">Open Door</string>
+    <string name="calls_takephoto">Take Photo</string>
+    <string name="calls_answer">Answer</string>
+    <string name="calls_close">Close</string>
+    <string name="calls_ledonoff">Led On-Off</string>
+    <string name="calls_calling">Calling</string>
+    <string name="calls_connected">Connected</string>
+    <string name="calls_dialling">Dialling</string>
+    <string name="calls_incoming">Incoming Call</string>
+    <string name="calls_outgoing">Outgoing Call</string>
+    <string name="door_settings_door_name">Door Name</string>
+    <string name="door_settings_set_master">Assign connected door to this device</string>
+    <string name="camera_name">Camera Name</string>
+    <string name="camera_ip">Camera IP</string>
+    <string name="camera_username">UserName</string>
+    <string name="camera_password">Password</string>
+    <string name="enter_door_name">Door Name</string>
+    <string name="network_settings">Network Settings</string>
+
+
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+    <string name="smart_not_ready">Smarthome feature not available yet.</string>
+    <string name="not_supported">Not Supported.</string>
+    <string name="item_room">ROOM</string>
+    <string name="item_door">DOOR</string>
+    <string name="check_input">Error! Check your input.</string>
+    <string name="info">Info</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="reset">Reset</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="device_name">Device Name</string>
+    <string name="screen_settings">Screen Settings</string>
+    <string name="date_time">Date and Time</string>
+    <string name="manual">Manual</string>
+    <string name="factory_set">Factory Settings</string>
+    <string name="app_version">App Version</string>
+    <string name="base_version">Base Version</string>
+    <string name="fw_version">FW Version</string>
+    <string name="ip_addr">IP Address</string>
+    <string name="volume">Volume</string>
+    <string name="ring_duration">Ring Duration (sec)</string>
+    <string name="ring_door">Door Ringtone</string>
+    <string name="ring_room">Room Ringtone</string>
+    <string name="coming_soon">Coming soon…</string>
+    <string name="install_app">Install App</string>
+    <string name="select_logo">Select Main Page Logo</string>
+    <string name="confirm">Confirm</string>
+    <string name="title_activity_camera_player">Camera Player</string>
+    <string name="pass_enter4_char">Error!!!, pls enter 4 characters</string>
+    <string name="logo_disabled">Logo disabled</string>
+    <string name="unsupported_file">Unsupported file, Supported formats = (.jpeg - .jpg - .png)</string>
+    <string name="device_busy_now">This device is busy right now.</string>
+    <string name="door_opened">Door opened.</string>
+    <string name="connected">Connected</string>
+    <string name="not_connected">Could not connect</string>
+    <string name="answered">Call answered</string>
+    <string name="declined">Call declined</string>
+    <string name="call_answered">%s answered the %s call</string>
+    <string name="call_declined">%s refused to %s call</string>
+    <string name="call_missed">%s\'s call was not answered</string>
+    <string name="delete">Delete</string>
+    <string name="never_sleep">Never Sleep</string>
+    <string name="sleep_2">2 minutes</string>
+    <string name="sleep_5">5 minutes</string>
+    <string name="sleep_10">10 minutes</string>
+    <string name="sleep_30">30 minutes</string>
+    <string name="network_time">Network Time</string>
+    <string name="saving">Saving, please wait…</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="in_call">In call</string>
+    <string name="updating">Updating</string>
+    <string name="theme_change_light">Do you want to switch to the light theme?</string>
+    <string name="theme_change_dark">Do you want to switch to the dark theme?</string>
+    <string name="back_to_home">Back to home</string>
+    <string name="parent_directory">Parent directory</string>
+    <string name="file_not_contains_apk">The file you selected does not contain the apk extension!</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="device_busy">Device is busy</string>
+    <string name="error_network_unreachable">NETWORK UNREACHABLE</string>
+    <string name="app_updated">Your app updated…</string>
+    <string name="mac_addr">Mac Address</string>
+    <string name="zone_open_info_one">Please close the zones those are open.\n Zones :  </string>
+    <string name="network_error">Router Control!!!, Please reboot your device.  </string>
+    <string name="enable">Enable</string>
+    <string name="name">Name</string>
+    <string name="type">Type</string>
+    <string name="contact">Contact</string>
+    <string name="relay">Relay</string>
+    <string name="active">Active</string>
+    <string name="passive">Passive</string>
+    <string name="scneraios">Scenarios</string>
+    <string name="show">Show</string>
+    <string name="notif_click">Click or swipe to see details</string>
+    <string name="call_notif">You have %d call log</string>
+    <string name="history_calls">History calls</string>
+    <string name="alarm">Alarm settings</string>
+    <string name="cameras">Cameras</string>
+    <string name="rooms_doors">Rooms doors</string>
+    <string name="smarthome">Smart home</string>
+    <string name="gallery">Gallery</string>
+    <string name="info_device_name">Alfanar Family</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="good_afternoon">Good Afternoon</string>
+    <string name="good_evening">Good Evening</string>
+    <string name="good_night">Good Night</string>
+    <string name="not_available">This feature not available yet.</string>
+    <string name="alarm_notif">Alarm has occurred</string>
+    <string name="initial_settings">Initial settings are applied…</string>
+    <string name="ip_change">Changing ip address…</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="settings_background_picture">Background:</string>
+    <string name="set">SET</string>
+    <string name="settings_sleep_options">Sleep Options</string>
+    <string name="theme_settings">Theme settings</string>
+    <string name="mac_address">Mac Address</string>
+    <string name="internet">Internet</string>
+    <string name="cpu_serial">CPU Serial</string>
+    <string name="checking">Checking…</string>
+    <string name="settings_timezones">Time Zones</string>
+    <string name="weather_settings">Weather Settings</string>
+    <string name="zones_cancel">All motion zones canceled.</string>
+    <string name="alarm2">Alarm Set</string>
+    <string name="alarm_inhome">In Home</string>
+    <string name="alarm_outhome">Out Home</string>
+    <string name="alarm_sleep">Sleep</string>
+    <string name="alarm_cancel">Cancel</string>
+    <string name="alarm_setting">Alarm Setting</string>
+    <string name="alarm_settings_enable">Alarm Enabled</string>
+    <string name="alarm_settings_disable">Alarm Disabled</string>
+    <string name="alarm_relay_type">Alarm Relay Contact Type</string>
+    <string name="alarm_relay_duration">Relay Duration(s)</string>
+    <string name="alarm_siren_type">Siren Type</string>
+    <string name="alarm_siren_duration">Siren Duration(s)</string>
+    <string name="alarm_siren_notify">Alarm Armed/Failed Siren Notification</string>
+    <string name="alarm_siren_trigger">Siren Trigger</string>
+    <string name="alarm_conti">Continuous</string>
+    <string name="alarm_internal">Internal</string>
+    <string name="alarm_external">External</string>
+    <string name="alarm_positive">Positive</string>
+    <string name="alarm_negative">Negative</string>
+    <string name="zone_setting">Zone Setting</string>
+    <string name="alarm_zone_type">Zone Type</string>
+    <string name="zone_motion">Motion Zone</string>
+    <string name="zone_leak">Continuous Alert Zone</string>
+    <string name="alarm_zone_name">Zone Name</string>
+    <string name="alarm_occur_duration">Alarm Occur Duration(s)</string>
+    <string name="alarm_arm_duration">Alarm Arm Duration(s)</string>
+    <string name="alarm_relay_active">Relay Active</string>
+    <string name="siren_active">Siren Active(when an alarm occurs)</string>
+    <string name="alarm_mode">Mode</string>
+    <string name="zone_status">Zone Status</string>
+    <string name="zone_enable">Enable</string>
+    <string name="alarm_name">Name</string>
+    <string name="alarm_type">Type</string>
+    <string name="zone_relay">Relay(s)</string>
+    <string name="alarm_log">Alarm Logs</string>
+    <string name="network_control">Device Not Connected to Network</string>
+    <string name="alarm_occurred">%s Alarm Occurred</string>
+    <string name="alarm_detected">%s Alarm Detected</string>
+    <string name="pass_incorrect">Incorrect Password</string>
+    <string name="pass_correct">Correct Password</string>
+    <string name="password">Password</string>
+    <string name="zone_armed">%s -> Armed</string>
+    <string name="zone_disarmed">%s -> Disarmed</string>
+    <string name="zone_open">%s -> Error! Already Open. Not Armed! </string>
+    <string name="close_opened_zones">Error, Close Opened Zones and Try Again!</string>
+    <string name="leakage_rearmed_auto">Continuous Alert Zone Automatically Re-Armed</string>
+    <string name="leakage_disarmed">Continuous Alert Zone Disarmed</string>
+    <string name="enter_all_field">Error! Please fill all fields</string>
+    <string name="alarm_pass_ok">Password Entered, Alarm Disarmed</string>
+    <string name="alarm_disabled">Alarm Disabled By User</string>
+    <string name="alarm_enabled">Alarm Enabled By User</string>
+    <string name="alarm_entered_mode_cancel">Entered Mode Cancel By User</string>
+    <string name="leakage_armed">Continuous Alert Zone Armed</string>
+    <string name="motion_armed">Motion Zone Armed</string>
+    <string name="set_door_volume">Set Door Speaker Volume</string>
+    <string name="set_room_volume">Set Device Speaker Volume</string>
+    <string name="set_volume_settings">Volume Settings</string>
+    <string name="change_password">For Change System Password, Enter Current password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="must_be_4_digits">The Password Must Be 4 Digits</string>
+    <string name="new_password_accepted">New Password Accepted</string>
+
+    <string name="smart_light">Light</string>
+    <string name="smart_dimmer">Dimmer</string>
+    <string name="smart_plug">Plug</string>
+    <string name="smart_shutter">Shutter</string>
+    <string name="smart_heating">Heating</string>
+    <string name="smart_climate">Climate</string>
+    <string name="smart_onoff">On-Off</string>
+    <string name="smart_key">Smart Key</string>
+    <string name="indoor_calling">Indoor Calling</string>
+    <string name="job_name">Job Name</string>
+    <string name="job">Job</string>
+    <string name="job1">Job-1</string>
+    <string name="job2">Job-2</string>
+    <string name="job3">Job-3</string>
+    <string name="time">Time</string>
+    <string name="val">Value</string>
+    <string name="scheduled_scens">Scheduled Scenarios</string>
+    <string name="fixed_scens">Fixed Scenarios</string>
+    <string name="scen_name">Scenario Name</string>
+    <string name="brightness">Brightness</string>
+    <string name="heating">Heat</string>
+    <string name="switching">Switching</string>
+    <string name="edit_dev_scen">Scheduled Device Scenario</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="ip_camera_edit_info">Tap the camera you want to watch, long press to edit</string>
+    <string name="cameras_empty">Camera not found</string>
+    <string name="gallery_photo_empty">No photo found</string>
+    <string name="all_gallery_deleted">Do you want to delete all photos?</string>
+    <string name="archive">Archive</string>
+    <string name="start_date">Starting date</string>
+    <string name="finish_date">End Date</string>
+    <string name="not_found">Not found</string>
+    <string name="history_empty">No call history found</string>
+    <string name="delete_show_records">Delete all displayed records?</string>
+    <string name="current">Current</string>
+    <string name="processing">Process in progress, please wait…</string>
+    <string name="unknown">Unknown</string>
+    <string name="cannot_make_call">Cannot make calls to this device</string>
+    <string name="can_not_call_yourself">You cannot call yourself!</string>
+    <string name="select_scenario">Select Scenario</string>
+    <string name="select_mode">Error! Please select mode</string>
+    <string name="unspecified">Unspecified</string>
+    <string name="alarm_scenarios">Alarm Scenarios</string>
+    <string name="alert_alarm_in_progress">Please Wait, Alarm in progress!</string>
+    <string name="alert_alarm_in_already_selected">Alarm scenario already selected</string>
+    <string name="alarm_alert_disable_status">Alarm not active, enable from alarm settings</string>
+    <string name="saved_zone_settings_with_info">Zone settings are saved. In order for the new settings to be active, select from the alarm scenarios on the homepage.</string>
+    <string name="saved_zone_settings">Zone settings are saved.</string>
+    <string name="zone_will_arm_in_home">Arming zones in "In Home" scenario…</string>
+    <string name="zone_will_arm_out_home">Arming zones in "Out Home" scenario…</string>
+    <string name="zone_will_arm_sleep">Arming zones in "Sleep" scenario…</string>
+    <string name="zone_will_closed">All motion zones are being canceled…</string>
+    <string name="min_alarm_arm">(minimum 3 second)</string>
+    <string name="contact_for_deaf">Call Notification Relay</string>
+    <string name="alfa_mini_not_supported">alfanar SMART Not Supported</string>
+    <string name="smart_thermostat">Thermostat</string>
+    <string name="zones_not_found_armed">No active zone to be established</string>
+    <string name="smart_flats">FLATS</string>
+    <string name="smart_rooms">ROOMS</string>
+    <string name="smart_devices">DEVICES</string>
+    <string name="smart_scenarios">SCENES</string>
+    <string name="flat_name">Flat Name</string>
+    <string name="delete_flat">Are you sure you want to delete the flat?</string>
+    <string name="favorites">FAVORITES</string>
+    <string name="select_room">Select Room</string>
+    <string name="select_flat">Select Flat</string>
+    <string name="delete_room">Are you sure you want to delete the room?</string>
+    <string name="no_flat">Flat not found, please create flat first.</string>
+    <string name="no_room">Room not found, please create room first.</string>
+    <string name="on_off_write_code">On-Off Operation Code</string>
+    <string name="on_off_feedback_code">On-Off Feedback Code</string>
+    <string name="room">Room</string>
+    <string name="add_favourite">Add to Favourites</string>
+    <string name="dimmer_value_write_code">Dimmer Value Operation Code</string>
+    <string name="dimmer_value_feedback_code">Dimmer Value Feedback Code</string>
+    <string name="up_down_write_code" >Up-Down Operation Code</string>
+    <string name="shutter_stop_code" >Shutter Stop Code</string>
+    <string name="shutter_value_write_code" >Shutter Value Operation Code</string>
+    <string name="shutter_value_feedback_code" >Shutter Value Feedback Code</string>
+    <string name="reverse_contact">Reverse Contact</string>
+    <string name="desired_temp_write_code">Desired Temperature Operation Code</string>
+    <string name="desired_temp_feedback_code">Desired Temperature Feedback Code</string>
+    <string name="current_temp_feedback_code">Current Temperature Feedback Code</string>
+    <string name="fan_write_code">Fan Operation Code</string>
+    <string name="fan_feedback_code">Fan Feedback Code</string>
+    <string name="room_name">Room Name</string>
+    <string name="control_device_name">Check device name</string>
+    <string name="control_knx_input1">Enter a value between 0–31</string>
+    <string name="control_knx_input2">Enter a value between 0–7</string>
+    <string name="control_knx_input3">Enter a value between 0–255</string>
+    <string name="delete_scen">Are you sure you want to delete the scenario?</string>
+    <string name="add_scen">Add Scenario</string>
+    <string name="add">Add</string>
+    <string name="select_device">Select Device</string>
+    <string name="device_detail">Device Detail</string>
+    <string name="no_scen">Scenario not found, please create scenario first.</string>
+    <string name="no_device">Device not found, please create device first.</string>
+    <string name="empty_text">Empty</string>
+    <string name="devices_empty">No Device</string>
+    <string name="rooms_empty">No Room</string>
+    <string name="flats_empty">No Flat</string>
+    <string name="scenarios_empty">No scenario</string>
+    <string name="add_flat">Add Flat</string>
+    <string name="add_room">Add Room</string>
+    <string name="scheduled_scenario_alert"> There should be at least 5 minutes between two tasks.</string>
+    <string name="scenary_day">Scenario Day</string>
+    <string name="scenary_job">Scenario Job</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="edit_dev_scen_alert">No scheduled scenarios found for device</string>
+    <string name="device_num">Device num:</string>
+    <string name="add_edit_knx_device_info">Press the \'+\' button to add a device, long press the device to edit it.</string>
+    <string name="smarthome_unlocked">Unlock the smart home to continue</string>
+    <string name="my_smart_scenarios">Smart Home Scenarios</string>
+    <string name="fixed_scens_not_found">The created fixed scenario could not be found.</string>
+    <string name="fixed_scens_not_found_device">In this scenario, the device was not found.</string>
+    <string name="action">Action</string>
+    <string name="pair">Pairing</string>
+    <string name="scenario_progress_alert">There is a scenario in progress,please wait.</string>
+    <string name="delete_smart_device_alert">Are you sure you want to delete the device?</string>
+    <string name="rtsp_connection_error">Can not connect to Camera!</string>
+
+
+    <string name="relay_info">Your Defined Rooms ad Devices Will Be Deleted!</string>
+    <string name="relay_light_info">Select Role for On/Off</string>
+    <string name="relay_warning">The Same Role Cannot Be Selected!</string>
+    <string name="relay_select_info">Select the Number of Roles from the Settings Menu.</string>
+    <string name="relay_saved">Defined Role</string>
+    <string name="relay_count">All Roles Defined!</string>
+    <string name="smart_relay_onoff_standart">On-Off</string>
+    <string name="smart_gas">Gas</string>
+    <string name="smart_electric">Electric</string>
+    <string name="smart_water">Water</string>
+    <string name="smart_relay_select">Select Role!</string>
+    <string name="smart_relay_create">Create</string>
+    <string name="smart_relay_refresh">Reset</string>
+    <string name="smart_relay_create_info">Create a Smart Home</string>
+    <string name="smart_relay_refresh_info">Smart Home Information Reset</string>
+    <string name="smart_relay_indefinite">Indefinite</string>
+    <string name="smart_relay_enter_time">Enter Time.</string>
+    <string name="smart_relay_up">Up</string>
+    <string name="smart_relay_down">Down</string>
+    <string name="screen_position">Screen Position</string>
+    <string name="screen_vertical">Portrait</string>
+    <string name="screen_horizontal">Landscape</string>
+    <string name="todo">todo</string>
+    <string name="relay_count_1">1 Relay</string>
+    <string name="relay_count_2">2 Relay</string>
+    <string name="enter_relay_1_name">Enter the name of the 1. relay</string>
+    <string name="enter_relay_2_name">Enter the name of the 2. relay</string>
+    <string name="outdoor1">Relay 1</string>
+    <string name="outdoor2">Relay 2</string>
+    <string name="wifi_permission_required">All permissions are required for Wi-Fi management</string>
+    <string name="auth_failed_check_password">Authentication failed – please check your password</string>
+    <string name="wifi_scan_permission_required">Wi-Fi scan permission is required</string>
+    <string name="connecting_to_wifi">Connecting to %1$s network…</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="network_forgotten">Network forgotten</string>
+    <string name="connection_lost">Connection lost</string>
+    <string name="security_label">Security: %1$s</string>
+    <string-array name="signal_labels">
+        <item>Very Weak</item>
+        <item>Weak</item>
+        <item>Medium</item>
+        <item>Good</item>
+        <item>Excellent</item>
+    </string-array>
+    <string name="open_network_message">Do you want to connect to this open (no password) network?\n\n⚠ Open networks are not secure.</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="status">Status</string>
+    <string name="signal">Signal</string>
+    <string name="very_weak">Very Weak</string>
+    <string name="weak">Weak</string>
+    <string name="medium">Medium</string>
+    <string name="good">Good</string>
+    <string name="excellent">Excellent</string>
+    <string name="speed">Speed</string>
+    <string name="mbps">%1$s Mbps</string>
+    <string name="frequency">Frequency</string>
+    <string name="ip_address">IP Address</string>
+    <string name="available_networks">Available Networks</string>
+    <string name="no_wifi_found">No Wi-Fi network found</string>
+    <string name="wifi_off">Wi-Fi is off</string>
+    <string name="signal_format">Signal: %s</string>
+    <string name="show_password">Show password</string>
+    <string name="connect">Connect</string>
+    <string name="enter_password_prompt">Enter password</string>
+    <string name="password_min_length">Password must be at least 8 characters</string>
+    <string name="saved_network">Saved network • %1$s</string>
+    <string name="forget">Forget</string>
+
+
+
+    <string name="ipMode">Switch IP Mode</string>
+    <string name="StaticIpDetail">The device will switch to Static IP mode. The IP address will be 192.168.2.X. Do you want to continue? App will restarted.</string>
+    <string name="DhcpIpDetail">The device will switch to DHCP IP mode. Please connect a router to the system. Do you want to continue? App will restarted.</string>
+    <string name="dhcpModeMode">DHCP Enabled</string>
+    <string name="staticIpMode">Static IP Enabled</string>
+    <string name="change_door_ip_mode">Change ODU IP Mode</string>
+    <string name="diferrent_network">Different Network Dedected, Check Ip Mode!!</string>
+    <string name="manually">Manual</string>
+
+
+</resources>

@@ -1,0 +1,42 @@
+## Start of default rc
+
+[sip]
+contact="vip70" <sip:vip70@localhost>
+use_info=0
+use_ipv6=1
+keepalive_period=30000
+sip_port=5060
+sip_tcp_port=0
+sip_tls_port=0
+media_encryption=none
+
+[net]
+#Because dynamic bitrate adaption can increase bitrate, we must allow "no limit"
+download_bw=0
+upload_bw=0
+
+[video]
+size=vga
+
+[app]
+tunnel=disabled
+auto_start=1
+record_aware=1
+
+[tunnel]
+host=
+port=443
+
+[misc]
+log_collection_upload_server_url=
+file_transfer_server_url=
+version_check_url_root=
+max_calls=10
+history_max_size=100
+conference_layout=1
+
+[in-app-purchase]
+server_url=
+
+
+## End of default rc

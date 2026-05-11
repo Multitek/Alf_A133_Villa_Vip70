@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.MainActivity">
+
+    <item
+        android:id="@+id/zone_stat"
+        android:title="@string/zone_status"
+        />
+
+    <item
+        android:id="@+id/siren_setting"
+        android:title="@string/alarm_setting"
+       />
+
+    <item
+        android:id="@+id/logs"
+        android:title="@string/alarm_log"
+        />
+
+
+</menu>

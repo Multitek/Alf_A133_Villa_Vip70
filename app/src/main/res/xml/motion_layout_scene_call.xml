@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start_call">
+
+        <Constraint
+            android:id="@+id/include_notification_call"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|center_vertical"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/linear_background_call"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+
+
+    <ConstraintSet android:id="@+id/end_call">
+
+       <Constraint
+        android:id="@+id/include_notification_call"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:id="@+id/linear_background_call"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </ConstraintSet>
+
+
+
+    <Transition
+        android:id="@+id/tid_click_call"
+        app:constraintSetEnd="@+id/end_call"
+        app:constraintSetStart="@+id/start_call">
+        <OnClick
+            app:targetId="@+id/include_notification_call"
+            app:clickAction="transitionToEnd"/>
+    </Transition>
+
+    <Transition
+        android:id="@+id/tid_call"
+        app:constraintSetEnd="@+id/end_call"
+        app:constraintSetStart="@+id/start_call">
+        <OnSwipe
+            app:dragDirection="dragStart"
+            app:touchAnchorId="@+id/include_notification_call"
+            app:touchAnchorSide="end" />
+    </Transition>
+
+</MotionScene>

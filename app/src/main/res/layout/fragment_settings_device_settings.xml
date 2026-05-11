@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/dimen_space_5"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dimen_space_30"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="start|center"
+                android:text="@string/settings_timezones"
+                android:textSize="22sp" />
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="250dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/spn_zones"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:format24Hour="kk:mm_dd.MM.yyyy"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="TEST"
+                android:visibility="invisible"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dimen_space_30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="start|center"
+                android:text="@string/settings_lblsubled"
+                android:textSize="22sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="250dp"
+                android:layout_height="match_parent">
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:background="?attr/ToolbarBackground"
+
+                    android:text="ToggleButton"
+                    android:textAllCaps="true"
+                    android:textSize="22sp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dimen_space_30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="start|center"
+                android:text="@string/settings_lbllanguages"
+                android:textSize="22sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="250dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/layout_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_language_click"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/text_language_title"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.75"
+                            android:gravity="center"
+                            android:text="test"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/img_expand_collapse_language"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_weight="0.1"
+                            android:contentDescription="@string/content_description"
+                            android:padding="3dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_expand" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="@dimen/dimen_space_5"
+                        android:layout_marginLeft="@dimen/dimen_space_5"
+                        android:layout_marginRight="@dimen/dimen_space_5"
+                        android:background="@color/peru"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/language2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/dimen_space_10"
+                        android:gravity="center"
+                        android:text="@string/language_english"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="?attr/ColorDarkLight"
+                        android:layout_marginLeft="@dimen/dimen_space_15"
+                        android:layout_marginRight="@dimen/dimen_space_15"/>
+
+                    <TextView
+                        android:id="@+id/language3"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/dimen_space_10"
+                        android:gravity="center"
+                        android:text="@string/language_arabic"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/txt_pass_info"
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/change_password"
+                android:textSize="22sp" />
+            <EditText
+                android:id="@+id/edt_pass"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:inputType="numberPassword"
+                android:imeOptions="actionDone"
+                android:digits="0123456789"
+                android:gravity="center"
+                android:maxLength="4"
+                android:textSize="25sp"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+

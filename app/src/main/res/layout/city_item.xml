@@ -1,0 +1,19 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemText"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:layout_gravity="start|center"
+    android:layout_margin="3dp"
+    android:elevation="@dimen/dimen_space_5"
+    android:fontFamily="@font/tomorrowregular"
+    android:gravity="start|center"
+    android:maxLines="1"
+    android:textColor="@color/peru"
+    android:textSize="19sp"
+    app:cardUseCompatPadding="true"
+    tools:text="fddffdadasdaDdad">
+
+
+</TextView>

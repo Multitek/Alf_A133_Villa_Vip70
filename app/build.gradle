@@ -1,0 +1,121 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.alfanar.villaroom'
+    compileSdk = 37
+
+    defaultConfig {
+        applicationId "com.alfanar.villaroom"
+        minSdk 33
+        versionCode 237
+        versionName "A133_Alf_Villa_IDU"
+        applicationId "com.alfanar.villaroom"
+        buildConfigField "String", "APP_BRAND", "\"ALFANAR\""            //don't_modify
+        buildConfigField "String", "APP_NAME",  "\"CLD_VILLA_VIP70\""  //don't_modify
+        buildConfigField "int", "APP_ID", "200"//don't_modify
+        android.buildFeatures.buildConfig = true
+    }
+
+
+
+
+    buildFeatures{
+        dataBinding true
+        viewBinding true
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            //noinspection ChromeOsAbiSupport
+            include "armeabi-v7a"
+            universalApk false
+        }
+    }
+
+
+
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging true
+            pickFirsts += ['lib/x86/libc++_shared.so', 'lib/x86_64/libc++_shared.so', 'lib/armeabi-v7a/libc++_shared.so', 'lib/arm64-v8a/libc++_shared.so']
+        }
+        resources {
+            excludes += ['META-INF/MANIFEST.MF', 'META-INF/INDEX.LIST', 'META-INF/io.netty.versions.properties']
+            pickFirsts += ['META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/LICENSE', 'META-INF/INDEX.LIST', 'META-INF/io.netty.versions.properties']
+            excludes += []
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        variant.outputs.forEach { output ->
+            def vName = android.defaultConfig.versionName
+            def vCode = android.defaultConfig.versionCode
+            output.outputFileName.set("${vName}_v${vCode}.apk")
+        }
+    }
+}
+
+dependencies {
+    //implementation fileTree(dir: 'lib', include: ['*.aar', '*.jar'], exclude: [])
+
+    implementation libs.linphone.sdk.android
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+
+    implementation libs.glide
+    implementation libs.filepicker
+    implementation libs.commons.lang3
+    implementation libs.commons.net
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    implementation libs.flexbox
+    implementation libs.process.phoenix
+
+
+
+
+    implementation libs.media
+    implementation libs.hivemq.mqtt.client
+    implementation libs.zxing.core
+    implementation libs.anrwatchdog
+    implementation libs.rburgst.okhttp.digest
+    implementation libs.commons.io
+    implementation libs.commons.validator
+    implementation libs.conscrypt.android
+    implementation libs.material.spinner
+    implementation libs.androidpdfviewer
+
+
+    implementation libs.libvlc.all
+
+
+
+}

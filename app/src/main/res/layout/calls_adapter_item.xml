@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_item"
+    android:layout_width="match_parent"
+    android:layout_marginStart="@dimen/dimen_space_30"
+    android:layout_marginEnd="@dimen/dimen_space_30"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_direction"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_space_5"
+           android:src="@drawable/ic_call_incoming"
+            android:contentDescription="@string/content_description" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_space_5"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center"
+                tools:text="14 Ocak 2019 19:22:55"
+                android:textSize="19sp" />
+
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                tools:text="Door 1 jkshkjfhdaksjhffbsajfb"
+                android:textSize="19sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_photo"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen_space_5"
+            android:contentDescription="@string/content_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_avatar" />
+
+        <TextView
+                android:textStyle="bold"
+            android:id="@+id/txt_state"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/connected"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_call"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimen_space_10"
+            android:layout_marginEnd="@dimen/dimen_space_10"
+            android:layout_marginTop="@dimen/dimen_space_5"
+            android:layout_marginBottom="@dimen/dimen_space_5"
+            android:contentDescription="@string/content_description"
+            android:padding="@dimen/dimen_space_5"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_call_24dp" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimen_space_10"
+            android:layout_marginEnd="@dimen/dimen_space_10"
+            android:layout_marginTop="@dimen/dimen_space_5"
+            android:layout_marginBottom="@dimen/dimen_space_5"
+            android:contentDescription="@string/content_description"
+            android:padding="@dimen/dimen_space_5"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_delete" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
+

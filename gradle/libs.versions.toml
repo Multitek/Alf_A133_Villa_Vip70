@@ -1,0 +1,72 @@
+[versions]
+agp = "9.2.1"
+
+
+
+
+androidpdfviewer = "3.1.0-beta.1"
+
+anrwatchdog = "1.4.0"
+commonsValidator = "1.10.1"
+zxcore = "3.5.4"
+filepicker = "1.1.1"
+flexbox = "3.0.0"
+glide = "5.0.7"
+hivemqMqttClient = "1.3.14"
+appcompat = "1.7.1"
+conscryptAndroid = "2.5.3"
+material = "1.13.0"
+activity = "1.13.0"
+constraintlayout = "2.2.1"
+media = "1.8.0"
+processPhoenix = "3.0.0"
+retrofit = "3.0.0"
+
+okhttpDigestVersion = "3.1.1"
+materialSpinner = "1.3.1"
+#alltaki versiyonları yükseltme
+libvlcAll = "3.6.5"
+linphoneSdkAndroid = "5.4.92"
+commonsIo = "2.22.0"
+commonsLang3 = "3.20.0"
+commonsNet = "3.13.0"
+
+
+
+[libraries]
+
+
+
+
+
+androidpdfviewer = { module = "com.github.barteksc:AndroidPdfViewer", version.ref = "androidpdfviewer" }
+anrwatchdog = { module = "com.github.anrwatchdog:anrwatchdog", version.ref = "anrwatchdog" }
+commons-io = { module = "commons-io:commons-io", version.ref = "commonsIo" }
+commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commonsLang3" }
+commons-net = { module = "commons-net:commons-net", version.ref = "commonsNet" }
+commons-validator = { module = "commons-validator:commons-validator", version.ref = "commonsValidator" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+zxing-core = { module = "com.google.zxing:core", version.ref = "zxcore" }
+filepicker = { module = "com.github.angads25:filepicker", version.ref = "filepicker" }
+flexbox = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+hivemq-mqtt-client = { module = "com.hivemq:hivemq-mqtt-client", version.ref = "hivemqMqttClient" }
+libvlc-all = { module = "org.videolan.android:libvlc-all", version.ref = "libvlcAll" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+linphone-sdk-android = { module = "org.linphone:linphone-sdk-android", version.ref = "linphoneSdkAndroid" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+media = { module = "androidx.media:media", version.ref = "media" }
+
+process-phoenix = { module = "com.jakewharton:process-phoenix", version.ref = "processPhoenix" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+rburgst-okhttp-digest = { module = "io.github.rburgst:okhttp-digest", version.ref = "okhttpDigestVersion" }
+conscrypt-android = { module = "org.conscrypt:conscrypt-android", version.ref = "conscryptAndroid" }
+material-spinner = { module = "com.jaredrummler:material-spinner", version.ref = "materialSpinner" }
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
+
+
+

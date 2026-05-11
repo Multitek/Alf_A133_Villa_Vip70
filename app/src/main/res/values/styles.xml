@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar" >
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+        <item name="android:soundEffectsEnabled">false</item>
+        <item name="android:hapticFeedbackEnabled">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:scrollViewStyle">@color/gray</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:scrollbarSize">3dp</item>
+        <item name="android:scrollbarFadeDuration">600</item>
+        <item name="android:scrollbarDefaultDelayBeforeFade">500</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+        <item name="android:textViewStyle">@style/AppTextView</item>
+        <item name="android:editTextStyle">@style/AppEditText</item>
+        <item name="editTextStyle">@style/AppEditText</item>
+        <item name="buttonStyle">@style/AppButton</item>
+        <item name="android:buttonStyle">@style/AppButton</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Dark Dialog Theme -->
+    <style name="DarkDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:background">@color/color_window_background_dark</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DarkDialogButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DarkDialogButtonStyle</item>
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+    </style>
+
+
+    <!-- Light Dialog Theme -->
+    <style name="LightDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:background">@color/color_window_background_light</item>
+        <item name="buttonBarPositiveButtonStyle">@style/LightDialogButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/LightDialogButtonStyle</item>
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+    </style>
+
+    <style name="LightDialogButtonStyle"
+        parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+    </style>
+
+    <style name="DarkDialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+    </style>
+
+
+    <style name="AppTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+    </style>
+
+    <style name="AppEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+    </style>
+
+    <style name="AppTheme.LightTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/color11</item>
+        <item name="android:windowBackground">@color/color_window_background_light</item>
+        <item name="android:popupMenuStyle">@style/PopUpStyleLightTheme</item>
+        <item name="cardViewStyle">@style/CardViewStyle.Light</item>
+        <item name="android:scrollbarThumbVertical">@drawable/app_scroll_thumb_light</item>
+        <item name="android:scrollbarTrackVertical">@drawable/app_scroll_track_light</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/app_scroll_thumb_light</item>
+        <item name="android:scrollbarTrackHorizontal">@drawable/app_scroll_track_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColorTertiary">@color/black</item>
+        <item name="android:textColorPrimaryInverse">@color/black</item>
+        <item name="android:textColorSecondaryInverse">@color/black</item>
+        <item name="android:textColorTertiaryInverse">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/black</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemLight</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropItemLight</item>
+        <item name="colorSwitchThumbNormal">@color/gray_new</item>
+        <item name="android:colorForeground">@color/black</item>
+        <item name="colorControlActivated">@color/green_new</item>
+        <item name="ToolbarBackground">@color/white</item>
+        <item name="ColorDarkLight">@color/black</item>
+        <item name="ColorStroke">@color/color_stroke_light</item>
+        <item name="ColorDisable">@color/dim_gray</item>
+        <item name="ColorDarkLightOnStroke">@color/color_window_background_light</item>
+        <item name="ColorDarkLightTransparentEnable">@color/transparent2</item>
+        <item name="ColorDarkLightTransparentDisable">@color/color12</item>
+    </style>
+
+    <style name="AppTheme.DarkTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:windowBackground">@color/color_window_background_dark</item>
+        <item name="android:popupMenuStyle">@style/PopUpStyleDarkTheme</item>
+        <item name="cardViewStyle">@style/CardViewStyle.Dark</item>
+        <item name="android:scrollbarThumbVertical">@drawable/app_scroll_thumb_dark</item>
+        <item name="android:scrollbarTrackVertical">@drawable/app_scroll_track_dark</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/app_scroll_thumb_dark</item>
+        <item name="android:scrollbarTrackHorizontal">@drawable/app_scroll_track_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorTertiary">@color/white</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+        <item name="android:textColorTertiaryInverse">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/white</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemDark</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropItemDark</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">@color/white</item>
+        <item name="colorControlActivated">@color/green_new</item>
+        <item name="ToolbarBackground">@color/black</item>
+        <item name="ColorDarkLight">@color/white</item>
+        <item name="ColorStroke">@color/color_stroke_dark</item>
+        <item name="ColorDisable">@color/dark_gray</item>
+        <item name="ColorDarkLightOnStroke">@color/color_window_background_dark</item>
+        <item name="ColorDarkLightTransparentEnable">@color/color6</item>
+        <item name="ColorDarkLightTransparentDisable">@color/color10</item>
+    </style>
+
+    <style name="Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="ColorDarkLight">@color/black</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+        <item name="android:soundEffectsEnabled">false</item>
+        <item name="android:hapticFeedbackEnabled">false</item>
+        <item name="android:scrollViewStyle">@color/gray</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:scrollbarSize">3dp</item>
+        <item name="android:scrollbarFadeDuration">600</item>
+        <item name="android:scrollbarDefaultDelayBeforeFade">500</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:fontFamily">@font/century_gothic_regular</item>
+        <item name="fontFamily">@font/century_gothic_regular</item>
+        <item name="android:textViewStyle">@style/AppTextView</item>
+        <item name="android:editTextStyle">@style/AppEditText</item>
+        <item name="editTextStyle">@style/AppEditText</item>
+        <item name="buttonStyle">@style/AppButton</item>
+        <item name="android:buttonStyle">@style/AppButton</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Transparent.TransparentLight" parent="Transparent">
+        <item name="ColorDarkLight">@color/black</item>
+        <item name="cardViewStyle">@style/CardViewStyle.Light</item>
+        <item name="ColorStroke">@color/color_stroke_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColorTertiary">@color/black</item>
+        <item name="android:textColorPrimaryInverse">@color/black</item>
+        <item name="android:textColorSecondaryInverse">@color/black</item>
+        <item name="android:textColorTertiaryInverse">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/black</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemLight</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropItemLight</item>
+        <item name="colorSwitchThumbNormal">@color/gray_new</item>
+        <item name="android:colorForeground">@color/black</item>
+        <item name="colorControlActivated">@color/green_new</item>
+        <item name="ToolbarBackground">@color/white</item>
+        <item name="colorPrimary">@color/color11</item>
+        <item name="android:popupMenuStyle">@style/PopUpStyleLightTheme</item>
+        <item name="android:scrollbarThumbVertical">@drawable/app_scroll_thumb_light</item>
+        <item name="android:scrollbarTrackVertical">@drawable/app_scroll_track_light</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/app_scroll_thumb_light</item>
+        <item name="android:scrollbarTrackHorizontal">@drawable/app_scroll_track_light</item>
+        <item name="ColorDisable">@color/dim_gray</item>
+        <item name="ColorDarkLightOnStroke">@color/color_window_background_light</item>
+        <item name="ColorDarkLightTransparentEnable">@color/transparent2</item>
+        <item name="ColorDarkLightTransparentDisable">@color/color12</item>
+    </style>
+
+    <style name="Transparent.TransparentDark" parent="Transparent">
+        <item name="ColorDarkLight">@color/white</item>
+        <item name="cardViewStyle">@style/CardViewStyle.Dark</item>
+        <item name="ColorStroke">@color/color_stroke_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorTertiary">@color/white</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+        <item name="android:textColorTertiaryInverse">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/white</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemDark</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropItemDark</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">@color/white</item>
+        <item name="colorControlActivated">@color/green_new</item>
+        <item name="ToolbarBackground">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:popupMenuStyle">@style/PopUpStyleDarkTheme</item>
+        <item name="android:scrollbarThumbVertical">@drawable/app_scroll_thumb_dark</item>
+        <item name="android:scrollbarTrackVertical">@drawable/app_scroll_track_dark</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/app_scroll_thumb_dark</item>
+        <item name="android:scrollbarTrackHorizontal">@drawable/app_scroll_track_dark</item>
+        <item name="ColorDisable">@color/dark_gray</item>
+        <item name="ColorDarkLightOnStroke">@color/color_window_background_dark</item>
+        <item name="ColorDarkLightTransparentEnable">@color/color6</item>
+        <item name="ColorDarkLightTransparentDisable">@color/color10</item>
+    </style>
+
+
+
+    <style name="CardViewStyle" parent="Widget.MaterialComponents.CardView" />
+
+    <style name="CardViewStyle.Dark">
+        <item name="cardBackgroundColor">@color/black</item>
+        <item name="cardCornerRadius">@dimen/card_view_corner_radius</item>
+    </style>
+
+    <style name="CardViewStyle.Light">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/card_view_corner_radius</item>
+    </style>
+
+
+
+    <style name="scrollbar_horizontal_style">
+        <item name="android:scrollbarAlwaysDrawHorizontalTrack">true</item>
+        <item name="android:scrollbars">horizontal</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbarSize">5dp</item>
+        <item name="android:isScrollContainer">true</item>
+        <item name="android:scrollbarFadeDuration">600</item>
+        <item name="android:scrollbarDefaultDelayBeforeFade">500</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/app_scroll_thumb_light</item>
+        <item name="android:scrollbarTrackHorizontal">@drawable/app_scroll_track_light</item>
+        <item name="android:fadeScrollbars">true</item>
+    </style>
+
+    <style name="scrollbar_vertical_style">
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:scrollbarSize">5dp</item>
+        <item name="android:isScrollContainer">true</item>
+        <item name="android:scrollbarFadeDuration">600</item>
+        <item name="android:scrollbarDefaultDelayBeforeFade">1000</item>
+        <item name="android:scrollbarThumbVertical">@drawable/app_scroll_thumb_light</item>
+        <item name="android:scrollbarTrackVertical">@drawable/app_scroll_track_light</item>
+        <item name="android:fadeScrollbars">true</item>
+    </style>
+
+
+
+    <style name="PopUpStyleLightTheme" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:listPreferredItemHeightSmall">60dp</item>
+        <item name="android:itemBackground">@color/color_stroke_light</item>
+    </style>
+
+    <style name="PopUpStyleDarkTheme" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:listPreferredItemHeightSmall">60dp</item>
+        <item name="android:itemBackground">@color/black</item>
+    </style>
+
+    <style name="SpinnerItemLight">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="SpinnerItemDark">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SpinnerDropItemLight">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="SpinnerDropItemDark">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="counterText">
+        <item name="android:textColor">@color/green_new</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="counterOverride">
+        <item name="android:textColor">@color/red_new</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TimeDatePickerDialogTheme" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="colorAccent">@color/chocolate</item>
+        <item name="colorControlActivated">@color/dark_green</item>
+        <item name="colorControlHighlight">@color/dark_red</item>
+        <item name="android:windowBackground">@color/color_stroke_dark</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+
+
+
+    <style name="CSpinner" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="android:timePickerMode">spinner</item>
+        <item name="android:textColorPrimary">@color/light_white</item>
+    </style>
+
+
+    <style name="Widget.App.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">?attr/ColorDarkLight</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="220dp"
+    android:layout_height="180dp"
+    android:layout_margin="@dimen/dimen_space_10"
+    xmlns:tools="http://schemas.android.com/tools">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                tools:text="DOOR"
+                android:textSize="15sp"/>
+            <ImageView
+                android:id="@+id/imgPhotox"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:src="@drawable/ic_avatar"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/content_description" />
+          <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                tools:text="14 Ocak 2019 19:22:55"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

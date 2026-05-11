@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ToolbarBackground" format="reference|color"/>
+    <attr name="ColorDarkLight" format="reference|color"/>
+    <attr name="ColorStroke" format="reference|color"/>
+    <attr name="ColorDisable" format="reference|color"/>
+    <attr name="ColorDarkLightOnStroke" format="reference|color"/>
+    <attr name="ColorDarkLightTransparentEnable" format="reference|color"/>
+    <attr name="ColorDarkLightTransparentDisable" format="reference|color"/>
+</resources>

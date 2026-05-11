@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txtCurrentCity"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:background="@color/green_new"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center"
+        android:padding="@dimen/dimen_space_5"
+        android:text="İzmir"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:id="@+id/spinnerCountries"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription=""
+        android:padding="@dimen/dimen_space_5"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCurrentCity"
+        app:ms_background_color="@color/black"
+        app:ms_text_color="@color/white" />
+
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/dimen_space_5"
+        android:background="@color/black"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:iconifiedByDefault="false"
+        android:inputType="text"
+        android:padding="5dp"
+        android:queryHint=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCountries" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleCity"
+        android:layout_width="490dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dimen_space_50"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/dimen_space_50"
+        android:layout_marginBottom="@dimen/dimen_space_5"
+        android:background="@color/light_black"
+        android:clipToPadding="false"
+        android:fadeScrollbars="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarDefaultDelayBeforeFade="1000"
+        android:scrollbarFadeDuration="600"
+        android:scrollbarSize="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/app_scroll_thumb_light"
+        android:scrollbarTrackVertical="@drawable/app_scroll_track_light"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        tools:listitem="@layout/city_item"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

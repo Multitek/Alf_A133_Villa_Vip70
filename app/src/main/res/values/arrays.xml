@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="knx_devices">
+        <item>@string/smart_light</item>
+        <item>@string/smart_dimmer</item>
+        <item>@string/smart_plug</item>
+        <item>@string/smart_shutter</item>
+        <item>@string/smart_heating</item>
+        <item>@string/smart_climate</item>
+        <item>@string/smart_onoff</item>
+        <item>@string/smart_key</item>
+    </string-array>
+
+
+    <string-array name="rf_devices">
+        <item>@string/smart_light</item>
+        <item>@string/smart_shutter</item>
+        <item>@string/smart_thermostat</item>
+        <item>@string/smart_onoff</item>
+    </string-array>
+
+
+
+</resources>

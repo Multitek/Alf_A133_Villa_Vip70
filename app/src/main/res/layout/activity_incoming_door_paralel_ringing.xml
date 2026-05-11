@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <include
+        android:id="@+id/include_top"
+        layout="@layout/bar_top_call"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dimen_space_5"
+        android:layout_marginTop="@dimen/dimen_space_10"
+        android:layout_marginEnd="@dimen/dimen_space_5"
+        android:layout_marginBottom="@dimen/dimen_space_10"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/include_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_top">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            >
+
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgDoor"
+                    android:layout_centerInParent="true"
+                    android:layout_width="640dp"
+                    android:layout_height="480dp" />
+
+                <TextView
+                    android:id="@+id/text_new_call"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:textSize="22sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dimen_space_10"
+                    android:background="@drawable/button_background2"
+                    android:textColor="@color/white"
+                    android:text="akfsnaksnfklan"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_answer"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_phone_answer"
+                app:backgroundTint="@color/green_new"
+                app:backgroundTintMode="src_over"
+                app:fabCustomSize="80dp"
+                android:layout_marginTop="@dimen/dimen_space_20"
+                android:layout_marginBottom="@dimen/dimen_space_20"
+                app:maxImageSize="70dp">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_close"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_phone_decline"
+                app:backgroundTint="@color/red_new"
+                app:backgroundTintMode="src_over"
+                android:layout_marginTop="@dimen/dimen_space_20"
+                android:layout_marginBottom="@dimen/dimen_space_20"
+                app:fabCustomSize="80dp"
+                app:maxImageSize="70dp">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/include_bottom"
+        layout="@layout/bar_bottom_call"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

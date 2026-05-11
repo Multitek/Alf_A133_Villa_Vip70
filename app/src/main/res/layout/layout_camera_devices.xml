@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="175dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/txtCameraName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="@dimen/dimen_space_5"
+            tools:text="12345678901234567890"
+            />
+
+
+        <ImageView
+            android:id="@+id/imgCameraDevice"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:padding="@dimen/dimen_space_5"
+            android:src="@drawable/ic_ip_camera"
+            android:contentDescription="@string/content_description" />
+
+
+
+        <TextView
+            android:id="@+id/txtCameraAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/dimen_space_5"
+            android:textSize="13sp"
+            tools:text="rtsp://10.99.28.1"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white_smoke"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/dimen_space_5"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="@dimen/dimen_space_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dark_theme"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/black"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radio_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:buttonTint="@color/white"
+                        android:gravity="start|center"
+                        android:text="@string/dark_theme"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <LinearLayout
+                        android:id="@+id/dark_main_background"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/main_background1"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:layout_margin="@dimen/dimen_space_5"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/radio_dark">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="@dimen/dimen_space_5"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toTopOf="@+id/main_clock"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextClock
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:format24Hour="EEE"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/white"
+                                    tools:text="DDD" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/comma"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <TextClock
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dimen_space_5"
+                                    android:layout_marginEnd="@dimen/dimen_space_5"
+                                    android:format24Hour="MMM dd"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/white"
+                                    tools:text="mmm gg" />
+                            </LinearLayout>
+
+                            <TextClock
+                                android:id="@+id/main_clock"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:format24Hour="kk:mm"
+                                android:gravity="start"
+                                android:textSize="20sp"
+                                android:layout_marginStart="@dimen/dimen_space_5"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toTopOf="@+id/imageView2"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:text="Clock" />
+                            <LinearLayout
+                                android:id="@+id/main_top_items"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_space_10"
+                                android:layout_marginEnd="@dimen/dimen_space_10"
+                                android:orientation="horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginStart="@dimen/dimen_space_5"
+                                    android:layout_marginEnd="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_disturb_active"
+                                    android:visibility="visible"
+                                    app:layout_constraintEnd_toStartOf="@+id/main_wake_up"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/white" />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginStart="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_settings"
+                                    app:tint="@color/white" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/main_left_items"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_space_10"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_alarm_normal"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="@dimen/dimen_space_5"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_alfanar_logo"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginStart="@dimen/dimen_space_10"
+                                android:layout_marginTop="@dimen/dimen_space_5"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_cloud_icon"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tint="@color/white" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_space_5"
+                            android:layout_marginTop="@dimen/dimen_space_10"
+                            android:layout_marginEnd="@dimen/dimen_space_5"
+                            android:layout_marginBottom="@dimen/dimen_space_10"
+                            android:background="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dimen_space_5"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="65dp"
+                                android:gravity="center|top"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/dark_menu1"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_call_history"
+                                    app:tint="@color/white" />
+
+                                <ImageView
+                                    android:id="@+id/dark_menu2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:padding="@dimen/dimen_space_5"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_alarm_normal"
+                                    app:tint="@color/white" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/dark_menu3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:padding="@dimen/dimen_space_5"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_camera"
+                                    app:tint="@color/white" />
+
+                                <ImageView
+                                    android:id="@+id/dark_menu4"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_outdoor"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/dark_menu5"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_smart_home"
+                                    app:tint="@color/white" />
+
+                                <ImageView
+                                    android:id="@+id/dark_menu6"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_gallery"
+                                    app:tint="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/light_theme"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/white"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radio_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:buttonTint="@color/black"
+                        android:gravity="start|center"
+                        android:text="@string/light_theme"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <LinearLayout
+                        android:id="@+id/light_main_background"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/main_background3"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:layout_margin="@dimen/dimen_space_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/radio_light">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="@dimen/dimen_space_5"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toTopOf="@+id/main_clock2"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextClock
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:format24Hour="EEE"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    tools:text="DDD" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/comma"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                                <TextClock
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dimen_space_5"
+                                    android:layout_marginEnd="@dimen/dimen_space_5"
+                                    android:format24Hour="MMM dd"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/black"
+                                    tools:text="mmm gg" />
+                            </LinearLayout>
+
+                            <TextClock
+                                android:id="@+id/main_clock2"
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:format24Hour="kk:mm"
+                                android:gravity="start"
+                                android:textSize="20sp"
+                                android:layout_marginStart="@dimen/dimen_space_5"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toTopOf="@+id/imageView3"
+                                app:layout_constraintStart_toStartOf="parent"
+                                tools:text="Clock" />
+
+                            <LinearLayout
+                                android:id="@+id/main_top_items2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen_space_10"
+                                android:layout_marginEnd="@dimen/dimen_space_10"
+                                android:orientation="horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginStart="@dimen/dimen_space_5"
+                                    android:layout_marginEnd="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_disturb_active"
+                                    android:visibility="visible"
+                                    app:layout_constraintEnd_toStartOf="@+id/main_wake_up"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="end"
+                                    android:layout_marginStart="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_settings"
+                                    app:tint="@color/black" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/main_left_items2"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dimen_space_10"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent">
+
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_alarm_normal"
+                                    app:tint="@color/black" />
+                            </LinearLayout>
+
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="@dimen/dimen_space_5"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_alfanar_logo"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_marginStart="@dimen/dimen_space_10"
+                                android:layout_marginTop="@dimen/dimen_space_5"
+                                android:contentDescription="@string/content_description"
+                                android:src="@drawable/ic_cloud_icon"
+                                android:visibility="gone"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tint="@color/black" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_space_5"
+                            android:layout_marginTop="@dimen/dimen_space_10"
+                            android:layout_marginEnd="@dimen/dimen_space_5"
+                            android:layout_marginBottom="@dimen/dimen_space_10"
+                            android:background="@color/black" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dimen_space_5"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:gravity="center|top"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/light_menu1"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_call_history"
+                                    app:tint="@color/black" />
+
+                                <ImageView
+                                    android:id="@+id/light_menu2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:padding="@dimen/dimen_space_5"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_alarm_normal"
+                                    app:tint="@color/black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/light_menu3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:padding="@dimen/dimen_space_5"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_camera"
+                                    app:tint="@color/black" />
+
+                                <ImageView
+                                    android:id="@+id/light_menu4"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_outdoor"
+                                    app:tint="@color/black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/light_menu5"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_smart_home"
+                                    app:tint="@color/black" />
+
+                                <ImageView
+                                    android:id="@+id/light_menu6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:layout_margin="@dimen/dimen_space_5"
+                                    android:contentDescription="@string/content_description"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_gallery"
+                                    app:tint="@color/black" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="@dimen/dimen_space_5"
+            android:layout_marginTop="@dimen/dimen_space_10"
+            android:layout_marginEnd="@dimen/dimen_space_5"
+            android:layout_marginBottom="@dimen/dimen_space_5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:textColor="@color/black"
+                android:padding="@dimen/dimen_space_5"
+                android:text="@string/settings_background_picture"/>
+
+
+            <ImageView
+                android:id="@+id/background1"
+                android:backgroundTint="@color/green"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background1"
+                android:padding="@dimen/dimen_space_5"/>
+            <ImageView
+                android:id="@+id/background2"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background2"
+                android:padding="@dimen/dimen_space_5"/>
+            <ImageView
+                android:id="@+id/background3"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background3"
+                android:padding="@dimen/dimen_space_5"
+                tools:ignore="TooManyViews" />
+            <ImageView
+                android:id="@+id/background4"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background4"
+                android:padding="@dimen/dimen_space_5"/>
+            <ImageView
+                android:id="@+id/background5"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background5"
+                android:padding="@dimen/dimen_space_5"/>
+            <ImageView
+                android:id="@+id/background6"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background6"
+                android:padding="@dimen/dimen_space_5"/>
+            <ImageView
+                android:id="@+id/background7"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background7"
+                android:padding="@dimen/dimen_space_5"/>
+            <ImageView
+                android:id="@+id/background8"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background8"
+                android:padding="@dimen/dimen_space_5"/>
+            <ImageView
+                android:id="@+id/background9"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background9"
+                android:padding="@dimen/dimen_space_5"/>
+
+            <ImageView
+                android:id="@+id/background10"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_space_5"
+                android:layout_marginEnd="@dimen/dimen_space_5"
+                android:gravity="center"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitCenter"
+                android:src="@drawable/main_background10"
+                android:padding="@dimen/dimen_space_5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dimen_space_5"
+            android:layout_marginTop="@dimen/dimen_space_20"
+            android:layout_marginEnd="@dimen/dimen_space_5"
+            android:layout_marginBottom="@dimen/dimen_space_5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:textStyle="bold"
+                android:id="@+id/btn_cancel"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen_space_10"
+                android:layout_marginEnd="@dimen/dimen_space_10"
+                android:background="@drawable/layer1"
+                android:backgroundTint="@color/black"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+            <Button
+                android:textStyle="bold"
+                android:id="@+id/btn_set"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dimen_space_10"
+                android:layout_marginEnd="@dimen/dimen_space_10"
+                android:background="@drawable/layer1"
+                android:gravity="center"
+                android:text="@string/set"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                tools:ignore="TooManyViews" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

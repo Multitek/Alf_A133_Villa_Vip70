@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout_edit"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_room_name"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_space_10"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/room_name"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:counterOverflowTextAppearance="@style/counterOverride"
+                app:counterTextAppearance="@style/counterText"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_room_name"
+                    android:layout_width="350dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/empty"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:maxLength="20"
+                    android:textAllCaps="false"
+                    android:textSize="23sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_space_5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_flat_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    tools:text="Flat Name"
+                    android:visibility="gone"
+                    android:textSize="25sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:id="@+id/layout_select">
+
+                    <TextView
+                        android:layout_width="220dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="@string/select_flat"
+                        android:textSize="25sp" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        app:cardBackgroundColor="?attr/ColorStroke"
+                        app:cardUseCompatPadding="true">
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="250dp"
+                            android:layout_height="60dp"
+
+                            />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/dimen_space_20"
+                android:orientation="horizontal">
+
+
+                <Button
+                android:textStyle="bold"
+                    android:id="@+id/btnCancel"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginStart="40dp"
+                    android:background="@drawable/layer3"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <Button
+                android:textStyle="bold"
+                    android:id="@+id/btnSave"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/layer3"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textAllCaps="true"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_space_15"
+                android:layout_marginBottom="@dimen/dimen_space_10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                android:textStyle="bold"
+                    android:id="@+id/btnDelete"
+                    android:layout_width="160dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/layer3"
+                    android:gravity="center"
+                    android:text="@string/delete"
+                    android:visibility="gone"
+                    android:textAllCaps="true"
+                    android:textSize="19sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_delete"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/customText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_space_10"
+                android:gravity="center"
+                android:text="@string/delete_room"
+                android:textSize="21sp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/dimen_space_15"
+                android:layout_marginBottom="@dimen/dimen_space_10"
+                android:orientation="horizontal">
+
+
+                <Button
+                android:textStyle="bold"
+                    android:id="@+id/btnYes"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginStart="40dp"
+                    android:background="@drawable/layer3"
+                    android:gravity="center"
+                    android:text="@string/yes"
+                    android:textAllCaps="true"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <Button
+                android:textStyle="bold"
+                    android:id="@+id/btnNo"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/layer3"
+                    android:gravity="center"
+                    android:text="@string/no"
+                    android:textAllCaps="true"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
