@@ -5,6 +5,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.view.View;
 
+import com.alfanar.villaroom.activities.MainActivity;
 import com.alfanar.villaroom.util.MyUtils;
 
 public class MainTimeout {
@@ -15,7 +16,9 @@ public class MainTimeout {
         public void dispatchMessage(Message msg) {
             switch (msg.what) {
                 case 100:
-                    MyUtils.getInstance().backToRootActivity();
+                    if (MainActivity.getInstance() == null) {
+                        MyUtils.getInstance().backToRootActivity();
+                    }
                     break;
                 case 200:
                     buttonsStat = true;

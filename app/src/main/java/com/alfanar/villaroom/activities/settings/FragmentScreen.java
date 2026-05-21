@@ -12,10 +12,12 @@ import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,6 +43,8 @@ public class FragmentScreen extends Fragment implements View.OnClickListener {
     private Drawable buttonDrawable;
     private boolean darkTheme;
 
+    private SeekBar seekBarBrightness;
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -64,6 +68,8 @@ public class FragmentScreen extends Fragment implements View.OnClickListener {
         TextView sleep10 = view.findViewById(R.id.sleep10);
         TextView sleep30 = view.findViewById(R.id.sleep30);
 
+        seekBarBrightness = view.findViewById(R.id.seekBarBrightness);
+
         layoutSleep = view.findViewById(R.id.layout_sleep);
 
         LinearLayout layoutSleepClick = view.findViewById(R.id.layout_sleep_click);
@@ -79,8 +85,60 @@ public class FragmentScreen extends Fragment implements View.OnClickListener {
         sleep30.setOnClickListener(this);
 
         setSleepText();
+        setupBrightnessControl();
 
         return view;
+    }
+
+
+    private void setupBrightnessControl() {
+        try {
+            // 1. Yazma izni kontrolü ve Manuel moda alma
+            if (MyUtils.getInstance().checkPermission(Manifest.permission.WRITE_SETTINGS)) {
+                Settings.System.putInt(context.getContentResolver(),
+                        Settings.System.SCREEN_BRIGHTNESS_MODE,
+                        Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+            }
+
+            // 2. Mevcut parlaklığı sistemden çek (0-255)
+            int currentBrightness = Settings.System.getInt(context.getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS);
+
+            seekBarBrightness.setProgress(currentBrightness);
+
+        } catch (Settings.SettingNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        seekBarBrightness.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                // Ekranın tamamen kararmasını önlemek için min: 10
+                if (progress < 10) {
+                    progress = 10;
+                    seekBar.setProgress(progress);
+                }
+
+                if (MyUtils.getInstance().checkPermission(Manifest.permission.WRITE_SETTINGS)) {
+                    // Sistem ayarını değiştir
+                    Settings.System.putInt(context.getContentResolver(),
+                            Settings.System.SCREEN_BRIGHTNESS, progress);
+
+                    // Değişikliği o anki pencereye (Window) hemen yansıt
+                    if (context != null && context.getWindow() != null) {
+                        WindowManager.LayoutParams layoutParams = context.getWindow().getAttributes();
+                        layoutParams.screenBrightness = progress / 255.0f;
+                        context.getWindow().setAttributes(layoutParams);
+                    }
+                }
+            }
+
+            @Override public void onStartTrackingTouch(SeekBar seekBar) {}
+            @Override public void onStopTrackingTouch(SeekBar seekBar) {
+                // Değeri SharedPreferences'a yedekle
+                sp.edit().putInt("brightness_level", seekBar.getProgress()).apply();
+            }
+        });
     }
 
     @Override

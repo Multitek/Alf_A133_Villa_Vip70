@@ -31,6 +31,8 @@ public class FragmentDeviceName extends Fragment {
     private SharedPreferences sp;
     private Dialog dialog;
 
+    private final Handler handler = new Handler(Looper.getMainLooper());
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,9 +59,15 @@ public class FragmentDeviceName extends Fragment {
                 binding.textInputDeviceName.setErrorEnabled(true);
                 binding.textInputDeviceName.setError(getResources().getString(R.string.check_input));
                 binding.textInputDeviceName.setErrorTextColor(colorStateList);
-                new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                    binding.textInputDeviceName.setHint(getResources().getString(R.string.device_name));
+                handler.postDelayed(() -> {
+
+                    if (binding == null || !isAdded()) {
+                        return;
+                    }
+
                     binding.textInputDeviceName.setError(null);
+                    binding.textInputDeviceName.setErrorEnabled(false);
+
                 }, 2500);
 
             } else {
@@ -90,6 +98,26 @@ public class FragmentDeviceName extends Fragment {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+
+        handler.removeCallbacksAndMessages(null);
+
+        if (binding != null) {
+
+            binding.textInputDeviceName.setError(null);
+            binding.textInputDeviceName.setErrorEnabled(false);
+
+            binding.edDeviceName.setText(
+                    sp.getString(
+                            "DEVICE_NAME",
+                            getResources().getString(R.string.item_room)
+                    )
+            );
+        }
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         if (dialog != null && dialog.isShowing()) {
@@ -97,12 +125,31 @@ public class FragmentDeviceName extends Fragment {
         }
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+        handler.removeCallbacksAndMessages(null);
+
+        binding = null;
+    }
+
     private void displayDialog(String text) {
+        if (dialog != null && dialog.isShowing()) {
+            TextView customText = dialog.findViewById(R.id.customText);
+            if (customText != null) {
+                customText.setText(text);
+            }
+            return;
+        }
         dialog = MyUtils.getInstance().dialogPublic(getActivity(), R.layout.dialog_ok);
         TextView customText = dialog.findViewById(R.id.customText);
         customText.setText(text);
         Button ok = dialog.findViewById(R.id.btnOk);
-        ok.setOnClickListener(v -> dialog.dismiss());
+        ok.setOnClickListener(v -> {
+            dialog.dismiss();
+        });
+
         dialog.show();
     }
 }

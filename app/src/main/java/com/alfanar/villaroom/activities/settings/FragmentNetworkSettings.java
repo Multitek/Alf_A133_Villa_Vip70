@@ -26,6 +26,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -651,6 +655,7 @@ public class FragmentNetworkSettings extends Fragment {
         }, 1500);
     }
 
+
     private void showPasswordDialog(WifiNetwork network) {
         if (!isAdded()) return;
 
@@ -672,9 +677,13 @@ public class FragmentNetworkSettings extends Fragment {
         root.addView(sec);
 
         String[] signalLabels = getResources().getStringArray(R.array.signal_labels);
+
         TextView sig = new TextView(requireContext());
-        sig.setText(String.format(getString(R.string.signal_format),
-                signalLabels[Math.min(network.signalLevel, 4)]));
+        sig.setText(String.format(
+                getString(R.string.signal_format),
+                signalLabels[Math.min(network.signalLevel, 4)]
+        ));
+
         sig.setTextSize(13);
         sig.setTextColor(getHintColor());
         root.addView(sig);
@@ -683,47 +692,102 @@ public class FragmentNetworkSettings extends Fragment {
         edPassword.setHint(getString(R.string.enter_password));
         edPassword.setHintTextColor(getHintColor());
         edPassword.setTextColor(getTextColor());
-        edPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+        edPassword.setInputType(
+                InputType.TYPE_CLASS_TEXT |
+                        InputType.TYPE_TEXT_VARIATION_PASSWORD
+        );
+
+        edPassword.setTransformationMethod(
+                android.text.method.PasswordTransformationMethod.getInstance()
+        );
+
         edPassword.setSingleLine();
+
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        );
+
         lp.topMargin = dp(12);
+
         root.addView(edPassword, lp);
 
         CheckBox cbShow = new CheckBox(requireContext());
         cbShow.setText(getString(R.string.show_password));
         cbShow.setTextSize(13);
-        cbShow.setChecked(true);
+        cbShow.setChecked(false);
         cbShow.setTextColor(getTextColor());
+
         cbShow.setOnCheckedChangeListener((b, checked) -> {
-            edPassword.setInputType(checked
-                    ? InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                    : InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+            if (checked) {
+                edPassword.setTransformationMethod(
+                        android.text.method.HideReturnsTransformationMethod.getInstance()
+                );
+            } else {
+                edPassword.setTransformationMethod(
+                        android.text.method.PasswordTransformationMethod.getInstance()
+                );
+            }
+
             edPassword.setSelection(edPassword.getText().length());
         });
+
         root.addView(cbShow);
 
-        new AlertDialog.Builder(requireContext(), getDialogTheme())
+        AlertDialog dialog = new AlertDialog.Builder(
+                requireContext(),
+                getDialogTheme()
+        )
                 .setView(root)
                 .setPositiveButton(getString(R.string.connect), (d, w) -> {
+
                     String pwd = edPassword.getText().toString().trim();
+
                     if (pwd.isEmpty()) {
-                        Toast.makeText(requireContext(),
+                        Toast.makeText(
+                                requireContext(),
                                 getString(R.string.enter_password_prompt),
-                                Toast.LENGTH_SHORT).show();
+                                Toast.LENGTH_SHORT
+                        ).show();
                         return;
                     }
-                    if (pwd.length() < 8 && !network.securityType.equals("WEP")) {
-                        Toast.makeText(requireContext(),
+
+                    if (pwd.length() < 8 &&
+                            !network.securityType.equals("WEP")) {
+
+                        Toast.makeText(
+                                requireContext(),
                                 getString(R.string.password_min_length),
-                                Toast.LENGTH_SHORT).show();
+                                Toast.LENGTH_SHORT
+                        ).show();
+
                         return;
                     }
-                    connectToNetwork(network.ssid, pwd, network.securityType);
+
+                    connectToNetwork(
+                            network.ssid,
+                            pwd,
+                            network.securityType
+                    );
                 })
                 .setNegativeButton(getString(R.string.cancel), null)
                 .setCancelable(true)
-                .show();
+                .create();
+
+        dialog.setOnShowListener(d -> {
+
+            edPassword.setTransformationMethod(
+                    android.text.method.PasswordTransformationMethod.getInstance()
+            );
+
+            edPassword.setSelection(edPassword.getText().length());
+
+            cbShow.setChecked(false);
+        });
+
+        applyImmersiveToDialog(dialog);
     }
 
     private void showSavedNetworkDialog(WifiNetwork network) {
@@ -749,14 +813,15 @@ public class FragmentNetworkSettings extends Fragment {
         lp.topMargin = dp(4);
         root.addView(info, lp);
 
-        new AlertDialog.Builder(requireContext(),getDialogTheme())
+        AlertDialog dialog = new AlertDialog.Builder(requireContext(), getDialogTheme())
                 .setView(root)
                 .setPositiveButton(getString(R.string.connect), (d, w) ->
                         connectToSavedNetwork(network.networkId, network.ssid))
                 .setNeutralButton(getString(R.string.forget), (d, w) ->
                         forgetNetwork(network.networkId))
                 .setNegativeButton(getString(R.string.cancel), null)
-                .show();
+                .create();
+        applyImmersiveToDialog(dialog);
     }
 
     private void showConnectedDialog(String ssid, WifiInfo wifiInfo) {
@@ -804,7 +869,6 @@ public class FragmentNetworkSettings extends Fragment {
         if (ip != 0) {
             String ipStr = String.format(Locale.US, "%d.%d.%d.%d",
                     ip & 0xff, (ip >> 8) & 0xff, (ip >> 16) & 0xff, (ip >> 24) & 0xff);
-
             addInfoRow(root,
                     getString(R.string.ip_address),
                     ipStr);
@@ -814,7 +878,7 @@ public class FragmentNetworkSettings extends Fragment {
             addInfoRow(root, "BSSID", wifiInfo.getBSSID());
         }
 
-        new AlertDialog.Builder(requireContext(), getDialogTheme())
+        AlertDialog dialog = new AlertDialog.Builder(requireContext(), getDialogTheme())
                 .setView(root)
                 .setPositiveButton(getString(R.string.ok), null)
                 .setNeutralButton(getString(R.string.forget), (d, w) -> {
@@ -822,19 +886,50 @@ public class FragmentNetworkSettings extends Fragment {
                     disconnectCurrent();
                 })
                 .setNegativeButton(getString(R.string.disconnect), (d, w) -> disconnectCurrent())
-                .show();
+                .create();
+        applyImmersiveToDialog(dialog);
     }
 
     private void showOpenNetworkDialog(WifiNetwork network) {
         if (!isAdded()) return;
 
-        new AlertDialog.Builder(requireContext(), getDialogTheme())
+        AlertDialog dialog = new AlertDialog.Builder(requireContext(), getDialogTheme())
                 .setTitle(network.ssid)
                 .setMessage(getString(R.string.open_network_message))
                 .setPositiveButton(getString(R.string.connect), (d, w) ->
                         connectToNetwork(network.ssid, "", "Açık"))
                 .setNegativeButton(getString(R.string.cancel), null)
-                .show();
+                .create();
+        applyImmersiveToDialog(dialog);
+    }
+
+    private void applyImmersiveToDialog(AlertDialog dialog) {
+        Window w = dialog.getWindow();
+        if (w == null) {
+            dialog.show();
+            return;
+        }
+        w.setFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
+        dialog.show();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            WindowInsetsController ctrl = w.getInsetsController();
+            if (ctrl != null) {
+                ctrl.hide(WindowInsets.Type.statusBars() | WindowInsets.Type.navigationBars());
+                ctrl.setSystemBarsBehavior(
+                        WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+            }
+        } else {
+            //noinspection deprecation
+            w.getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
+        w.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
     }
 
     class WifiAdapter extends RecyclerView.Adapter<WifiAdapter.VH> {
