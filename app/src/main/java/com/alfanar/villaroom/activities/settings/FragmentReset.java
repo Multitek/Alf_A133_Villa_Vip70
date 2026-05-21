@@ -152,7 +152,7 @@ public class FragmentReset extends Fragment {
     private void switchToStaticIp() {
 
         binding.txtIpMode.setText(context.getResources().getString(R.string.staticIpMode));
-      //  MyUtils.getInstance().dhcpOff(App.getInstance());
+         MyUtils.getInstance().dhcpOff2(App.getInstance());
         Toast.makeText(getActivity(), requireActivity().getResources().getString(R.string.saving),LENGTH_LONG).show();
         MyUtils.getInstance().backToRootActivity();
         new Handler(Looper.getMainLooper()).postDelayed(() -> {

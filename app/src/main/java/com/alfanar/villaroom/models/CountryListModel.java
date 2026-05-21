@@ -6,6 +6,10 @@ public class CountryListModel {
 
     public ArrayList<CountryModel> countryList;
 
+    public CountryListModel() {
+        // Required for Gson deserialization
+    }
+
     public CountryListModel(ArrayList<CountryModel> countryList) {
         this.countryList = countryList;
     }

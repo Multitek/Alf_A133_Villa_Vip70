@@ -106,7 +106,7 @@ public class MainThread extends Thread {
                 I2CWorkerThread.getInstance().kill();
             }
 
-            MultiCastThread.getInstance().start();
+            MultiCastThread.getInstance().init(App.getInstance()).start();
             TCPServer.getInstance().start();
             SystemClock.sleep(500);
             netWatcher.start();

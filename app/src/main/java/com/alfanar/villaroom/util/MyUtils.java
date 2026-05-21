@@ -1074,7 +1074,7 @@ public class MyUtils {
         new Handler(Looper.getMainLooper()).post(() -> {
             try {
                 // Android 6'da bazen Context.ETHERNET_SERVICE yok; string ile almak daha garantili
-                Object ethernetManager = ctx.getSystemService("ethernet");
+               /* Object ethernetManager = ctx.getSystemService("ethernet");
                 if (ethernetManager == null) {
                     Log.e(TAG, "EthernetManager is null (no ethernet service?)");
                     return ;
@@ -1093,7 +1093,7 @@ public class MyUtils {
                 Object ipConf = ctor.newInstance(DHCP, NONE, null, null);
 
                 Method setConfiguration = ethernetManager.getClass().getMethod("setConfiguration", ipConfCl);
-                setConfiguration.invoke(ethernetManager, ipConf);
+                setConfiguration.invoke(ethernetManager, ipConf);*/
 
                 Log.i(TAG, "Ethernet set to DHCP OK");
 
@@ -1103,8 +1103,9 @@ public class MyUtils {
 
             } catch (Throwable t) {
                 Log.e(TAG, "Failed to set Ethernet DHCP", t);
-                ctx.sendBroadcastAsUser(new Intent("COM.MULTITEK.DHCP_ON"), android.os.Process.myUserHandle());
+
             }finally {
+                ctx.sendBroadcastAsUser(new Intent("COM.MULTITEK.DHCP_ON"), android.os.Process.myUserHandle());
                 MyUtils.getInstance().getShared().edit().putBoolean("STATIC_IP_MODE", false).commit();
             }
         });
@@ -1151,7 +1152,7 @@ public class MyUtils {
     }
 
     @SuppressLint("WrongConstant")
-    public void dhcpOff(Context ctx) {
+    public void dhcpOffFFFF(Context ctx) {
         new Handler(Looper.getMainLooper()).post(() -> {
             boolean success = false;
             try {
@@ -1213,6 +1214,7 @@ public class MyUtils {
             } catch (Throwable t) {
                 Log.e(TAG, "Ethernet STATIC başarısız", t);
             } finally {
+
                 MyUtils.getInstance().getShared().edit()
                         .putBoolean("STATIC_IP_MODE", success)
                         .apply(); // commit() yerine apply() — UI thread'i bloklamaz
