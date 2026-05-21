@@ -100,7 +100,7 @@ public class AndroidAudioManager implements Handler.Callback {
             mHandler.sendEmptyMessageDelayed(RELEASE_MEDIA_PLAYER, 6000);
 
 
-            float vol = volIndex*1f;
+            float vol = volIndex / 15.0f;
 
 
             Logger.d("adjustRingLevel vol = " + vol +" volIndex = " + volIndex);

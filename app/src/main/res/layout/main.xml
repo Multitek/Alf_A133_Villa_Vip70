@@ -282,13 +282,12 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen_space_10"
-                android:layout_marginBottom="@dimen/dimen_space_10"
                 android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@+id/main_date_layout"
+                app:layout_constraintBottom_toBottomOf="@+id/main_clock"
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <TextView
@@ -296,7 +295,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:textSize="45sp"
+                    android:textSize="35sp"
                     tools:text="Günaydın" />
 
                 <TextView
@@ -304,7 +303,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:textSize="45sp"
+                    android:textSize="35sp"
                     tools:text="Alfanar Ailesi" />
             </LinearLayout>
 
@@ -315,13 +314,8 @@
                 android:layout_marginEnd="@dimen/dimen_space_10"
                 android:layout_marginBottom="@dimen/dimen_space_20"
                 android:orientation="horizontal"
-
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
-
-
-
-
             </LinearLayout>
 
 

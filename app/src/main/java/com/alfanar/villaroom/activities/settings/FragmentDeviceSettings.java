@@ -259,9 +259,11 @@ public class FragmentDeviceSettings extends Fragment {
             case 1 -> "ar";
             default -> "ar";
         };
-
+        String currentLangCode = sp.getString("language_code", "en");
+        if (languageCode.equals(currentLangCode)) {
+            return;
+        }
         sp.edit().putString("language_code", languageCode).commit();
-
         LocaleListCompat appLocale = LocaleListCompat.forLanguageTags(languageCode);
         AppCompatDelegate.setApplicationLocales(appLocale);
 

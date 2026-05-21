@@ -49,7 +49,7 @@
                         android:hint="@string/empty"
                         android:imeOptions="actionDone"
                         android:importantForAutofill="no"
-                        android:inputType="textPersonName"
+                        android:inputType="text|textNoSuggestions"
                         android:maxLength="21"
                         android:textAllCaps="false"
                         android:textSize="23sp" />

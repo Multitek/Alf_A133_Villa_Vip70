@@ -44,7 +44,7 @@
                     android:hint="@string/empty"
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"
-                    android:inputType="textPersonName"
+                    android:inputType="text|textNoSuggestions"
                     android:maxLength="21"
                     android:nextFocusForward="@id/ed_ip"
                     android:textAllCaps="false"
