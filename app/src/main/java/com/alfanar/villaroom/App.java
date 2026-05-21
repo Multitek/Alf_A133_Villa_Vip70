@@ -50,7 +50,7 @@ public class App extends Application {
 
 
 
-        /*boolean rebooted = BootRebootDetector.isNewBootSession(this);
+        boolean rebooted = BootRebootDetector.isNewBootSession(this);
         if (rebooted) {
             Logger.d("BootRebootDetector.DEVICE_BOOT");
             MyUtils.getInstance().dhcpOn(this);
@@ -58,14 +58,14 @@ public class App extends Application {
             new Handler(Looper.getMainLooper()).postDelayed(() -> {
                 String ip = MyUtils.getInstance().getIpAddress();
                 if(ip.equals("192.168.256.256")){
-                    MyUtils.getInstance().dhcpOff(App.getInstance());
+                    MyUtils.getInstance().dhcpOff2(App.getInstance());
                     new Handler(Looper.getMainLooper()).postDelayed(() -> MyUtils.getInstance().restartApp(),5000);
                 }
             },90*1000);
 
         } else {
             Logger.d("APP_RESTART_SAME_BOOT");
-        }*/
+        }
 
 
 

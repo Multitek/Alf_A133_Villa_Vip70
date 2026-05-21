@@ -1,6 +1,7 @@
 package com.alfanar.villaroom.activities.settings;
 
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,7 +11,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.alfanar.villaroom.R;
 import com.alfanar.villaroom.databinding.ActivityPasswordControlBinding;
@@ -18,7 +18,7 @@ import com.alfanar.villaroom.threads.MainTimeout;
 import com.alfanar.villaroom.util.Logger;
 import com.alfanar.villaroom.util.MyUtils;
 
-public class PasswordControlActivity extends AppCompatActivity implements View.OnClickListener {
+public class PasswordControlActivity extends Activity implements View.OnClickListener {
 
     private final StringBuffer inputStringBuffer = new StringBuffer();
     ActivityPasswordControlBinding binding;

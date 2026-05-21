@@ -98,6 +98,7 @@ public class OutGoingDoorConnected extends AppCompatActivity implements View.OnC
             }
 
             if (cstate.equals(Call.State.Connected)) {
+
                 if (!streamsRunning) {
                     try {
                         String relayAttribute = call.getRemoteParams() != null ?

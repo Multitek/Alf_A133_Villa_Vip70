@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.alfanar.villaroom"
         minSdk 33
-        versionCode 237
+        versionCode 238
         versionName "A133_Alf_Villa_IDU"
         applicationId "com.alfanar.villaroom"
         buildConfigField "String", "APP_BRAND", "\"ALFANAR\""            //don't_modify
@@ -58,7 +58,13 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -102,7 +108,7 @@ dependencies {
 
 
 
-    implementation libs.media
+
     implementation libs.hivemq.mqtt.client
     implementation libs.zxing.core
     implementation libs.anrwatchdog
@@ -112,7 +118,7 @@ dependencies {
     implementation libs.conscrypt.android
     implementation libs.material.spinner
     implementation libs.androidpdfviewer
-
+    implementation libs.media
 
     implementation libs.libvlc.all
 
